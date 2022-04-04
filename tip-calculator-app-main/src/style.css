@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --primary-color: hsl(172, 67%, 45%);
+  --secondary-color: hsl(183, 100%, 15%);
+  --white-color: hsl(0, 0%, 100%);
+  --input-color: hsl(189, 41%, 97%);
+  --simbol-input-color: hsl(184, 14%, 56%);
+  --active-state-color: hsl(185, 41%, 84%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+body {
+  font-family: 'Space Mono', sans-serif;
+  background-color: var(--active-state-color);
+  line-height: 1.6;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.words {
+  margin: 2em 0;
+}
+
+.words span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 1.5rem;
+  color: hsl(186, 14%, 43%);
+}
+
+.container {
+  background: var(--white-color);
+  padding: 1.6em 2em;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.inner-container .bill_input, .num-people_input {
+  display: flex;
+  padding: 0.5em 1.2em;
+  border-radius: 5px;
+  gap: 1em;
+  color: var(--simbol-input-color);
+  background-color: var(--input-color);
+}
+
+.inner-container .bill_input:focus-within, .choose-tip_group input:focus, .num-people_input:focus-within  {
+  box-shadow: 0 0 2px var(--secondary-color), 
+              0 0 2px var(--secondary-color),
+              0 0 2px var(--secondary-color);
+}
+
+.num-people_input.warn {
+  box-shadow: 0 0 2px red, 
+              0 0 2px red,
+              0 0 2px red;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.7em;
+  color: var(--simbol-input-color);
+}
+
+.bill_input input, .num-people_input input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  text-align: end;
+  font-family: 'Space Mono', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.choose-tip {
+  margin: 1em 0;
+}
+
+.choose-tip_group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, calc(100% - 150px)));
+  gap: 1em;
+}
+
+.choose-tip_group button {
+  background-color: var(--secondary-color);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.5em;
+  font-family: 'Space Mono', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--white-color);
+}
+
+.choose-tip_group button.active{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.choose-tip_group input {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  text-align: end;
+  padding: 0 1em;
+  background: var(--input-color);
+  font-family: 'Space Mono', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.result-container {
+  margin-top: 2em;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  color: var(--white-color);
+}
+
+.result {
+  padding: 2em 1.5em 1.3em;
+}
+
+.result div:nth-last-child(2) {
+  padding-top: 1em;
+}
+
+.result button {
+  border: none;
+  outline: none;
+  width: 100%;
+  margin-top: 1.5em;
+  padding: 0.8em;
+  border-radius: 5px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  font-family: 'Space Mono', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.flex_result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex_result h2{
+  font-size: 2rem;
+}
+
+.flex_result span:first-child {
+  color: var(--simbol-input-color);
+  display: block;
+  font-size: 0.8rem;
+}
+
+.flex_result span:nth-child(2){
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 992px) {
+
+  .words {
+    margin: 0;
+  }
+
+  main.container {
+    border-radius: 20px;
+    margin-top: -5em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    width: 58em;
+    height: 31em;
+    gap: 3em;
+  }
+
+  .inner-container {
+    padding-left: 0.5em;
+  }
+
+  .bill_input label{
+    font-size: 1.2rem;
+  }
+
+  .choose-tip {
+    margin: 3em 0;
+  }
+  
+  .choose-tip_group {
+    grid-template-columns: repeat(3, minmax(4em, calc(100% - 6em)));
+  }
+  
+  .result-container {
+    margin-top: 0;
+  }
+  
+  .result {
+    height: 27rem;
+    max-height: 100%;
+    display: grid;
+    grid-template-rows: 4rem 6rem;
+    padding: 3em 2.5em;
+  }
+
+  .result button {
+    align-self: end;
+  }
+
+  .flex_result h2{
+    font-size: 2.8rem;
+  }
+
+  .flex_result span:first-child {
+    font-size: 1rem;
+  }
+
+  .flex_result span:nth-child(2) {
+    font-size: 2.5rem;
+  }
+  
+}
+

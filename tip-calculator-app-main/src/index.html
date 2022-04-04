@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  
+  <article class="words">
+    <span>spli</span>
+    <span>tter</span>
+  </article>
+  
+  <main class="container">
+  
+    <article class="inner-container">
+      <section class="bill">
+        <h3>Bill</h3>
+        <div class="bill_input">
+          <label for="bill">$</label>
+          <input type="number" id="bill" class="bill" placeholder="0" name="bill">
+        </div>
+      </section>
+
+      <section class="choose-tip">
+        <h3>Select Tip %</h3>
+        <div class="choose-tip_group">
+          <button class="choose-tip_button" id="1">5%</button>
+          <button class="choose-tip_button" id="2">10%</button>
+          <button class="choose-tip_button" id="3">15%</button>
+          <button class="choose-tip_button" id="4">25%</button>
+          <button class="choose-tip_button" id="5">50%</button>
+          <input type="number" id="choose-tip_custom" placeholder="Custom">
+        </div>
+      </section>
+
+      <section class="num-people">
+        <h3>Number of People</h3>
+        <div class="num-people_input">
+          <label for="people"><i class="fa-solid fa-user"></i></label>
+          <input type="number" id="people" name="people" placeholder="0">
+        </div>
+      </section>
+    </article>
+
+    <article class="result-container">
+      
+      <section class="result">
+        
+        <div class="result_tip-amount flex_result">
+          <h4>Tip Amount <span>/ person</span></h4>
+          <span>$<h2 id="resultTipAmount">0.00</h2></span>
+        </div>
+        
+        <div class="result_total flex_result">
+          <h4>Total <span>/ person</span></h4>
+          <span>$<h2 id="resultTotal">0.00</h2></span>
+        </div>
+        
+        <button type="reset" id="resultReset">Reset</button>
+      </section>
+      
+    </article>
+
+  </main>
+
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="app.js"></script>
+</body>
+</html>
