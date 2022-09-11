@@ -1,0 +1,31 @@
+{
+  "name": "pricing-component-toggle",
+  "private": false,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite src",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "jest --config jest.config.js --watch"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "@happy-dom/jest-environment": "^2.55.0",
+    "@testing-library/dom": "^8.13.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "autoprefixer": "^10.4.4",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1",
+    "jsdom": "^19.0.0",
+    "postcss": "^8.4.12",
+    "pretty-format": "^27.5.1",
+    "regenerator-runtime": "^0.13.9",
+    "tailwindcss": "^3.0.23",
+    "vite": "^2.9.0",
+    "whatwg-fetch": "^3.6.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.17.9",
+    "puppeteer": "^13.5.2"
+  }
+}

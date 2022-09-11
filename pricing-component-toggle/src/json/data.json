@@ -1,0 +1,22 @@
+{
+  "pricing": {
+    "basic": {
+      "price": "199.99",
+      "storage": "500 GB",
+      "user": 2,
+      "sizeSend": "3 GB"
+    },
+    "professional": {
+      "price": "299.99",
+      "storage": "1 TB",
+      "user": 5,
+      "sizeSend": "10 GB" 
+    },
+    "master": {
+      "price": "399.99",
+      "storage": "2 TB",
+      "user": 10,
+      "sizeSend": "20 GB" 
+    }
+  }
+}

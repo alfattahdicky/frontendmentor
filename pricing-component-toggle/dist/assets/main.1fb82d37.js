@@ -1,0 +1,1 @@
+const s=document.getElementById("switch"),t=document.getElementById("slider");s.addEventListener("click",function(){t.classList.contains("translate-x-8")?t.classList.remove("translate-x-8"):t.classList.add("translate-x-8")});
